@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="vue-app">
+			<!--<h1>V-if</h1>-->
+			<!--<button @click="error = !error" >show error</button>-->
+			<!--<button @click="success = !success" >show error</button>-->
+			<!--&lt;!&ndash;<p v-if="error">网络连接错误,404</p>&ndash;&gt;-->
+			<!--&lt;!&ndash;<p v-else-if="success">网络连接成功</p>&ndash;&gt;-->
+			<!--<p v-show="error">网络连接错误,404</p>-->
+			<!--<p v-show="success">网络连接成功</p>-->
+
+			<h1>V-for循环 遍历</h1>
+			<ul>
+				<li v-for="item in arrarylist">{{ item }}</li>
+			</ul>
+
+			<ul>
+				<li v-for="(user,index) in users">
+					{{index+1}}.{{ user.name }}—— {{ user.age }}
+				</li>
+			</ul>
+
+			<template v-for="user in users">
+				<h2>{{user.name}}</h2>
+				<p>{{user.age}}</p>
+			</template>
+
+		</div>
+
+
+		<script  src="app.js"></script>
+	</body>
+</html>
+
+
